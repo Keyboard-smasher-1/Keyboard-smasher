@@ -3,7 +3,7 @@ const http = require('http').Server(app);
 
 const io = require('socket.io')(http, {
   cors: {
-    origin: "http://localhost:8080",
+    origin: "http://localhost:8081",
     methods: ["GET", "POST"],
     credentials: true
   },
@@ -16,7 +16,7 @@ io.on('connection', (socket) => {
 
   // Broadcast when a user typing the keyboard
   socket.on('newTyping', (typing) => {
-    socket.broadcast.emit('serverTyping', typing)
+    io.emit('serverTyping', typing)
   })
 
   // Broadcast when a user wins
