@@ -11,7 +11,18 @@ const io = require('socket.io')(http, {
 })
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  // Broadcast when a user connects
+  socket.broadcast.emit('meesage', 'A user has joined the game')
+
+  // Broadcast when a user typing the keyboard
+  socket.on('newTyping', (typing) => {
+    socket.broadcast.emit('serverTyping', typing)
+  })
+
+  // Run when a user disconnects
+  socket.on('disconnect', () => {
+    io.emit('message', 'A user has left the game')
+  })
 })
 
 const PORT = 4000
