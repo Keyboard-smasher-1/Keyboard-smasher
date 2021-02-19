@@ -45,11 +45,11 @@ io.on('connection', (socket) => {
   })
 
   socket.on("removeUser", (data) => {
-    let newUsers = users.filter(el => {el !== data})
+    // let newUsers = users.filter(el => {el !== data})
     users.splice(users.indexOf(data), 1)
     io.emit('afterLogout', users)
 
-    users = newUsers
+    // users = newUsers
   })
 
    // Run when a user disconnects
