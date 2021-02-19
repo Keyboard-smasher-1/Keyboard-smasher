@@ -3,7 +3,7 @@ const http = require('http').Server(app);
 
 const io = require('socket.io')(http, {
   cors: {
-    origin: "http://localhost:8081",
+    origin: "https://keyboard-smasher-d4345.web.app",
     methods: ["GET", "POST"],
     credentials: true
   },
