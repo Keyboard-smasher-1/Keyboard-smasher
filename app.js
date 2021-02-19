@@ -22,6 +22,10 @@ io.on('connection', (socket) => {
     io.emit('userOnline', users)
   })
 
+  socket.on('startGame', (data) => {
+    io.emit('countingGame', data)
+  })
+
   // socket.emit('loggedIn', {
   //   users: users.map(data => data.username)
   // })
