@@ -1,0 +1,25 @@
+{
+  "name": "Keyboard-smasher-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keyboard-smasher-1/Keyboard-smasher-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keyboard-smasher-1/Keyboard-smasher-server/issues"
+  },
+  "homepage": "https://github.com/Keyboard-smasher-1/Keyboard-smasher-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.1.1"
+  }
+}
